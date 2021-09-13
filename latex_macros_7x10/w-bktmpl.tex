@@ -1,0 +1,573 @@
+%%%%%%%%%%%%%%
+%% Run LaTeX on this file several times to get Table of Contents,
+%% cross-references, and citations.
+
+%% w-bktmpl.tex. Current Version: Feb 16, 2012
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Template file for
+%  Wiley Book Style, Design No.: SD 001B, 7x10
+%  Wiley Book Style, Design No.: SD 004B, 6x9
+%
+%  Prepared by Amy Hendrickson, TeXnology Inc.
+%  http://www.texnology.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Class File
+
+%% For default 7 x 10 trim size:
+\documentclass{WileySev}
+
+%% Or, for 6 x 9 trim size
+%\documentclass{WileySix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Post Script Font File
+
+% For PostScript text
+% If you have font problems, you may edit the w-bookps.sty file
+% to customize the font names to match those on your system.
+\usepackage[UTF8]{ctex}
+\usepackage{w-bookps}
+\usepackage[a4paper]{geometry}
+\usepackage{parskip}
+\usepackage{zhnumber}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
+%首行缩进2个字符
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+%设置段落间距
+\setlength{\parskip}{0.5em}
+
+%%%%%%%
+%% For times math: However, this package disables bold math (!)
+%% \mathbf{x} will still work, but you will not have bold math
+%% in section heads or chapter titles. If you don't use math
+%% in those environments, mathptmx might be a good choice.
+
+% \usepackage{mathptmx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Graphicx.sty for Including PostScript .eps files
+
+\usepackage{graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Other packages you might want to use:
+
+% for chapter bibliography made with BibTeX
+% \usepackage{chapterbib}
+
+% for multiple indices
+% \usepackage{multind}
+
+% for answers to problems
+% \usepackage{answers}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Change options here if you want:
+%%
+%% How many levels of section head would you like numbered?
+%% 0= no section numbers, 1= section, 2= subsection, 3= subsubsection
+%%==>>
+\setcounter{secnumdepth}{3}
+
+%% How many levels of section head would you like to appear in the
+%% Table of Contents?
+%% 0= chapter titles, 1= section titles, 2= subsection titles, 
+%% 3= subsubsection titles.
+%%==>>
+\setcounter{tocdepth}{2}
+
+%% Cropmarks? good for final page makeup
+%% \docropmarks %% turn cropmarks on
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DRAFT
+%
+% Uncomment to get double spacing between lines, current date and time
+% printed at bottom of page.
+% \draft
+% (If you want to keep tables from becoming double spaced also uncomment
+% this):
+% \renewcommand{\arraystretch}{0.6}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Title Pages
+%%
+%% Wiley will provide title and copyright page, but you can make
+%% your own titlepages if you'd like anyway
+
+%% Setting up title pages, type in the appropriate names here:
+\booktitle{Wiley 书籍中文模板}
+\subtitle{非 Wiley 官方中文书籍模板}
+
+\author{CookWhy@163.com}
+%or
+\authors{}
+
+%% \\ will start a new line.
+%% You may add \affil{} for affiliation, ie,
+%\authors{Robert M. Groves\\
+%\affil{Universitat de les Illes Balears}
+%Floyd J. Fowler, Jr.\\
+%\affil{University of New Mexico}
+%}
+
+%% Print Half Title and Title Page:
+\halftitlepage
+\titlepage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Off Print Info
+
+%% Add your info here:
+\offprintinfo{title, edition}{author}
+
+%% Can use \\ if title, and edition are too wide, ie,
+%% \offprintinfo{Survey Methodology,\\ Second Edition}{Robert M. Groves}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Copyright Page
+
+\begin{copyrightpage}{year}
+Title, etc
+\end{copyrightpage}
+
+% Note, you must use \ to start indented lines, ie,
+% 
+% \begin{copyrightpage}{2004}
+% Survey Methodology / Robert M. Groves . . . [et al.].
+% \       p. cm.---(Wiley series in survey methodology)
+% \    ``Wiley-Interscience."
+% \    Includes bibliographical references and index.
+% \    ISBN 0-471-48348-6 (pbk.)
+% \    1. Surveys---Methodology.  2. Social 
+% \  sciences---Research---Statistical methods.  I. Groves, Robert M.  II. %
+% Series.\\
+
+% HA31.2.S873 2004
+% 001.4'33---dc22                                             2004044064
+% \end{copyrightpage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Frontmatter >>>>>>>>>>>>>>>>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Only Dedication (optional) 
+%% or Contributor Page for edited books
+%% before \tableofcontents
+
+\dedication{感谢 Wiley 提供如此好的英文模板，基于此模板进行中文书籍模板制作，显得非常轻松与美观}
+
+% ie,
+%\dedication{To my parents}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Contributors Page for Edited Book
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% If your book has chapters written by different authors,
+% you'll need a Contributors page.
+
+% Use \begin{contributors}...\end{contributors} and
+% then enter each author with the \name{} command, followed
+% by the affiliation information.
+
+% \begin{contributors}
+% \name{Masayki Abe,} Fujitsu Laboratories Ltd., Fujitsu Limited, Atsugi,
+% Japan
+
+% \name{L. A. Akers,} Center for Solid State Electronics Research, Arizona
+% State University, Tempe, Arizona
+
+% \name{G. H. Bernstein,} Department of Electrical and
+% Computer Engineering, University of Notre Dame, Notre Dame, South Bend, 
+% Indiana; formerly of
+% Center for Solid State Electronics Research, Arizona
+% State University, Tempe, Arizona 
+% \end{contributors}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 简短目录，可选
+% 只到目录的第一级
+\contentsinbrief %optional
+\tableofcontents
+% \listoffigures %optional
+% \listoftables  %optional
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Optional Foreword:
+% 序言，可由他人作序，或自序
+
+\begin{foreword}
+这里是前言的样例，可以置于 forword 命令里。
+
+象牙塔里的绅士总会假清高的笑骂：“政治家，政治家，你算得什么艺术家呢!你的艺术是有倾向的!”对于这种嘲笑，革命文学家只有一个回答：
+
+你想用什么来骂倒我呢？难道因为我要改造世界的那种热诚的巨大火焰， 它在我的艺术里也在燃烧着么？
+
+\prefaceauthor{卢纳察尔斯基}
+\where{海淀区花园桥, 北京\\
+2021年9月}
+\end{foreword}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Optional Preface:
+% 前言
+
+\begin{preface}
+一本书的附件包括书前部分的序、前言、致谢、题词、编撰者名单、作者简介、附录等等。
+不是每本书都有所有的附件，取舍全看作者的选择。其中容易搞混的是Foreword 和Preface。中文都可以翻译成序言或前言。在英文里，区别是前者由他人撰写，后者由作者自己写。一本书的Foreword 可以有几个，分别请不同的名人或同行撰写。而每一版的Preface 只有一个。如果是重版书，新版里可以把之前旧版的所有前言罗列，为的是方便作者了解该书的新旧更替。一本书的出版，经常不仅仅是作者一个人或几个人的努力，致谢部分是最好的用武之地，可以让作者答谢所有为之付出努力的团队。
+
+以上诸多细则里，涉及公式、参考文献和使用许可的问题最为普遍，也是出版过程中最掣肘的因素之一。
+\prefaceauthor{作者}
+\where{广州天河\\
+2021年9月}
+\end{preface}
+
+% ie,
+% \begin{preface}
+% This is an example preface.
+% \prefaceauthor{R. K. Watts}
+% \where{Durham, North Carolina\\
+% September, 2004}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Optional Acknowledgments:
+
+% \acknowledgments
+% acknowledgment text
+% \authorinitials{} % ie, I. R. S.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Glossary Type of Environment:
+
+% \begin{glossary}
+% \term{<term>}{<description>}
+% \end{glossary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{acronyms} 
+% \acro{<term>}{<description>}
+% \end{acronyms}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% In symbols environment <term> is expected to be in math mode; 
+%% if not in math mode, use \term{\hbox{<term>}}
+
+% \begin{symbols}
+% \term{<math term>}{<description>}
+% \term{\hbox{<non math term>}}Box used when not using a math symbol.
+% \end{symbols}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{introduction}
+%\introauthor{<name>}{<affil>}
+% Introduction text...
+% \end{introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% End for Front Matter, Beginning of text of book  >>>>>>>>>>>
+
+%% Short version of title without \\ may be written in sq. brackets:
+
+%% Optional Part :
+\part[简单说明]
+{简单说明\\ 太长可换行}
+
+\chapter[章节标题不带名人名言]
+{章节标题不带名人名言 \\ 太长可换行}
+
+本模板基于 Wiley 英文模板制作，原模板名为 \textit{The Wiley Book Style}，网址为：
+
+\url{https://www.latextemplates.com/template/wiley-book-style}
+
+Wiley出版社1807年创建于美国，是一家具有超过200年历史的全球知名的出版机构，面向专业人士、科研人员、教育工作者、学生、终身学习者提供必需的知识和服务。
+Wiley是一家提供必备内容解决方案的全球供应商，旨在提高科研、 教育、专业实践行为的产出。Wiley及旗下的子品牌出版了超过500位诺贝尔奖得主的作品。
+
+本模板保留了 Wiley 的版本信息及 Logo 等，并把纸张尺寸根据中国的习惯，改为 A4，使用者可按需修改这类信息。
+
+本模板未取得 Wiley 授权，请使用者自行确认版权信息。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% optional prologue or prologues
+% \chapter{Chapter Title}
+% \prologue{<text>}{<author attribution>}
+
+\chapter[章节标题带名人名言]
+{章节标题带名人名言 \\ 太长可换行}
+% 名人名言可用 prologue 置于 chapter 目录下
+\prologue{优秀的人讨论思想，普通的人讨论事件，狭隘的人讨论人。}{埃莉诺·罗斯福，罗斯福总统夫人}
+
+本模板主要把 Wiley 模板的 CHAPTER、PART 等关键词翻译成中文并设置好版面格式。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Edited Book: Author and Affiliation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% After \chapter{Chapter Title}, you can
+% enter the author name and embed the affiliation with
+% \chapterauthors{(author name, or names)
+% \chapteraffil{(affiliation or affiliations)}
+% }    
+
+% For instance:
+% \chapter{Chapter Title}
+% \chapterauthors{G. Alvarez and R. K. Watts
+% \chapteraffil{Carnegie Mellon University, Pittsburgh, Pennsylvania}
+
+% For separate affiliations you can use \affilmark{(number)} after
+% the name of a particular author and before the matching affiliation:
+
+% For instance:
+% \chapter{Chapter Title}
+% \chapterauthors{George Smeal, Ph.D.\affilmark{1}, Sally Smith,
+% M.D.\affilmark{2}, and Stanley Kubrick\affilmark{1}
+% \chapteraffil{\affilmark{1}AT\&T Bell Laboratories
+% Murray Hill, New Jersey\\
+% \affilmark{2}Harvard Medical School,
+% Boston, Massachusetts}
+% }
+
+\part[更多排版样式说明]
+{更多排版样式说明\\ 太长可换行}
+
+\chapter[排版工具说明与举例]
+{排版工具说明与举例}
+\prologue{工欲善其事，必先利其器。}{《论语·卫灵公》}
+
+参考文献，可正常使用 BibTeX 格式即可。
+
+一切格式，可参考本源文件格式进行；Wiley 原始文件包的文件名、结构均没有修改。
+
+更多排版问题可在本项目的 Github 上留言。
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% short version of section head, or one without \\ supplied in sq. brackets.
+
+% \section[Introduction and fugue]{Introduction\\ and fugue}
+% \subsection[This is the subsection]{This is the\\ subsection}
+% \subsubsection{This is the subsubsection}
+% \paragraph{This is the paragraph}
+
+% \begin{chapreferences}{widest label}
+% \bibitem{<label>}Reference
+% \end{chapreferences}
+
+% optional chapter bibliography using BibTeX,
+% must also have \usepackage{chapterbib} before \begin{document}
+% Must use root file with \include{chap1}, \include{chap2} form.
+%\bibliographystyle{plain}
+%\bibliography{<your .bib file name>}
+
+% optional appendix at the end of a chapter:
+% \chapappendix{<chap appendix title>}
+% \chapappendix{} % no title
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% End Matter >>>>>>>>>>>>>>>>>>
+
+% \appendix{<optional title for appendix at end of book>}
+% \appendix{} % appendix without title
+
+% \begin{references}{<widest label>}
+% \bibitem{sampref}Here is reference.
+% \end{references}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional Problem Sets: Can use this at the end of each chapter or at end
+%% of book
+
+% \begin{problems}
+% \prob
+% text
+
+% \prob
+% text
+
+% \subprob
+% text
+
+% \subprob
+% text
+
+% \prob
+% text
+% \end{problems}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional Exercises: Can use this at the end of each chapter or at end
+%% of book
+
+% \begin{exercises}
+% \exer
+% text
+
+% \exer
+% text
+
+% \subexer
+% text
+
+% \subexer
+% text
+
+% \exer
+% text
+% \end{exercises}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INDEX: Use only one index command set:
+
+%% 1) The default LaTeX Index
+\printindex
+
+%% 2) For Topic index and Author index:
+
+% \usepackage{multind}
+% \makeindex{topic}
+% \makeindex{authors}
+% \begin{document}
+% ...
+% add index terms to your book, ie,
+% \index{topic}{A term to go to the topic index}
+% \index{authors}{Put this author in the author index}
+
+%% (these are Wiley commands)
+%\multiprintindex{topic}{Topic index}
+%\multiprintindex{authors}{Author index}
+
+\end{document}
+
+%%%%%%% Demo of section head containing sample macro:
+%% To get a macro to expand correctly in a section head, with upper and
+%% lower case math, put the definition and set the box 
+%% before \begin{document}, so that when it appears in the 
+%% table of contents it will also work:
+
+\newcommand{\VT}[1]{\ensuremath{{V_{T#1}}}}
+
+%% use a box to expand the macro before we put it into the section head:
+
+\newbox\sectsavebox
+\setbox\sectsavebox=\hbox{\boldmath\VT{xyz}}
+
+%%%%%%%%%%%%%%%%% End Demo
+
+
+Other commands, and notes on usage:
+
+-----
+Possible section head levels:
+\section{Introduction}
+\subsection{This is subsection}
+\subsubsection{This is subsubsection}
+\paragraph{This is the paragraph}
+
+-----
+Tables:
+ Remember to use \centering for a small table and to start the table
+ with \hline, use \hline underneath the column headers and at the end of 
+ the table, i.e.,
+
+\begin{table}[h]
+\caption{Small Table}
+\centering
+\begin{tabular}{ccc}
+\hline
+one&two&three\\
+\hline
+C&D&E\\
+\hline
+\end{tabular}
+\end{table}
+
+For a table that expands to the width of the page, write
+
+\begin{table}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc}
+\hline
+....
+\end{tabular*}
+%% Sample table notes:
+\begin{tablenotes}
+$^a$Refs.~19 and 20.
+
+$^b\kappa, \lambda>1$.
+\end{tablenotes}
+\end{table}
+
+-----
+Algorithm.
+Maintains same fonts as text (as opposed to verbatim which uses fixed
+width fonts). Space at beginning of line will be maintained if you
+use \ at beginning of line.
+
+\begin{algorithm}
+{\bf state\_transition algorithm} $\{$
+\        for each neuron $j\in\{0,1,\ldots,M-1\}$
+\        $\{$   
+\            calculate the weighted sum $S_j$ using Eq. (6);
+\            if ($S_j>t_j$)
+\                    $\{$turn ON neuron; $Y_1=+1\}$   
+\            else if ($S_j<t_j$)
+\                    $\{$turn OFF neuron; $Y_1=-1\}$   
+\            else
+\                    $\{$no change in neuron state; $y_j$ remains %
+unchanged;$\}$ .
+\        $\}$   
+$\}$   
+\end{algorithm}
+
+-----
+Sample quote:
+\begin{quote}
+quotation...
+\end{quote}
+
+-----
+Listing samples
+
+\begin{enumerate}
+\item
+This is the first item in the numbered list.
+
+\item
+This is the second item in the numbered list.
+\end{enumerate}
+
+\begin{itemize}
+\item
+This is the first item in the itemized list.
+
+\item
+This is the first item in the itemized list.
+This is the first item in the itemized list.
+This is the first item in the itemized list.
+\end{itemize}
+
+\begin{itemize}
+\item[]
+This is the first item in the itemized list.
+
+\item[]
+This is the first item in the itemized list.
+This is the first item in the itemized list.
+This is the first item in the itemized list.
+\end{itemize}
+
+%% Index commands
+Author and Topic Indices, See docs.pdf and w-bksamp.pdf
