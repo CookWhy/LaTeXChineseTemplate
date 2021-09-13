@@ -4,11 +4,13 @@
 
 目前有的模板主要有 Wiley。
 
-## Wily 7x10 中文模板，参看目录 Wiley_latex_macros_7x10
+## Wily 7x10 中文模板
 
-     可根据 w-bktmpl.tex 文件修改，生成自己的文档。w-bktmpl.tex 文档本身也是该模板的说明和使用样例。
+    本模板放置于目录 Wiley_latex_macros_7x10 中，原始的 Wiley 模板为 7″ x 10″ 英寸书籍模板。
 
-     为了快速知道这是否是你在寻找的东西，可先看一下 Wiley_latex_macros_7x10/w-bktmpl.pdf 文件。
+    可根据 w-bktmpl.tex 文件修改，生成自己的文档。w-bktmpl.tex 文档本身也是该模板的说明和使用样例。
+
+    为了快速知道这是否是你在寻找的东西，可先看一下 Wiley_latex_macros_7x10/w-bktmpl.pdf 文件。
 
 
 # 问题反馈
