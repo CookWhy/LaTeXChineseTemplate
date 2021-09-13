@@ -1,9 +1,18 @@
-# LaTeXChineseTemplate
+# LaTeX 中文模板
 
 本仓库存放一些本人修改过的中文 LaTex 模板，主要是对一些英文出版机构的 LaTeX 适合中文环境，以作学习之用。
 
 目前有的模板：
 
-1. Wily 7x10 中文模板，参看目录 latex_macros_7x10
+1. Wily 7x10 中文模板，参看目录 Wiley_latex_macros_7x10
 
-     可根据 w-bktmpl.tex 文件修改，生成自己的文档。
+     可根据 w-bktmpl.tex 文件修改，生成自己的文档。w-bktmpl.tex 文档本身也是该模板的说明和使用样例。
+
+     为了快速知道这是否是你在寻找的东西，可先看一下 Wiley_latex_macros_7x10/w-bktmpl.pdf 文件。
+
+
+# 问题反馈
+
+如果你在使用这些模板过程中碰到排版问题，或是有部分修改需求，可于本仓库反馈，请描述清楚问题及需求。
+
+我会尽量抽时间解决并更新版本。
