@@ -29,22 +29,10 @@
 % If you have font problems, you may edit the w-bookps.sty file
 % to customize the font names to match those on your system.
 \usepackage{w-bookps}
-\usepackage[a4paper]{geometry}
-\usepackage{parskip}
-\usepackage{zhnumber}
+
+% 修改链接风格
 \usepackage{hyperref}
 \hypersetup{hidelinks}
-
-
-%首行缩进2个字符
-\usepackage{indentfirst}
-\setlength{\parindent}{2em}
-%设置段落间距
-\setlength{\parskip}{0.5em}
-
-% 采用临时办法来设置奇偶页的边距，留出装订线
-% TODO: 应该使用 geometry 的 twoside
-\setlength{\evensidemargin}{-36pt}
 
 %%%%%%%
 %% For times math: However, this package disables bold math (!)
@@ -334,9 +322,9 @@ Wiley 原始模板地址：https://www.latextemplates.com/template/wiley-book-st
 
 \section{待修改内容}
 
-1. 中文奇偶页边距设置，用更好的方式来设置。
+1. 采用更好的方式来设置中文奇偶页边距设置。
 
-2. 中英文混排字体优化。
+2. 中英文混排字体优化，对中文字体设置进行优化。
 
 3. 尽可能使用 CTeX 来进行章节名称汉化，现在是直接在原来的 cls 文件里手工修改，维护十分不方便。
 

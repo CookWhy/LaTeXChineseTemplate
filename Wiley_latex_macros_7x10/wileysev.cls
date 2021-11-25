@@ -65,6 +65,7 @@ This version is dated \currversion^^J^^J}
 \parindent=1pc
 \parskip=0pt %plus .1pt
 
+% start of original pagesize setting
 %% to make the 6 1/8 by 9 1/4 trim size
 %\textheight=45pc \textwidth=28pc
 
@@ -109,6 +110,17 @@ This version is dated \currversion^^J^^J}
 \evensidemargin=0pt
 \advance\evensidemargin-.5in
 \marginparwidth .75in
+% end of original pagesize setting
+
+% 使用符合中文习惯的页面设置
+\RequirePackage[a4paper]{geometry}
+% 采用临时办法来设置奇偶页的边距，留出装订线
+% TODO: 应该使用 geometry 的 twoside
+\setlength{\evensidemargin}{-36pt}
+
+%\RequirePackage{parskip}
+%\RequirePackage{zhnumber}
+
 
 \if@twocolumn
  \setlength\marginparsep {10\p@}
