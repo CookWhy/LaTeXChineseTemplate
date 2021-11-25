@@ -1,4 +1,4 @@
-%%%%%%%%%%%%%%
+﻿%%%%%%%%%%%%%%
 %% Run LaTeX on this file several times to get Table of Contents,
 %% cross-references, and citations.
 
@@ -28,7 +28,6 @@
 % For PostScript text
 % If you have font problems, you may edit the w-bookps.sty file
 % to customize the font names to match those on your system.
-\usepackage[UTF8]{ctex}
 \usepackage{w-bookps}
 \usepackage[a4paper]{geometry}
 \usepackage{parskip}
@@ -36,11 +35,16 @@
 \usepackage{hyperref}
 \hypersetup{hidelinks}
 
+
 %首行缩进2个字符
 \usepackage{indentfirst}
 \setlength{\parindent}{2em}
 %设置段落间距
 \setlength{\parskip}{0.5em}
+
+% 采用临时办法来设置奇偶页的边距，留出装订线
+% TODO: 应该使用 geometry 的 twoside
+\setlength{\evensidemargin}{-36pt}
 
 %%%%%%%
 %% For times math: However, this package disables bold math (!)
@@ -311,6 +315,58 @@ Wiley是一家提供必备内容解决方案的全球供应商，旨在提高科
 \prologue{优秀的人讨论思想，普通的人讨论事件，狭隘的人讨论人。}{埃莉诺·罗斯福，罗斯福总统夫人}
 
 本模板主要把 Wiley 模板的 CHAPTER、PART 等关键词翻译成中文并设置好版面格式。
+
+版权声明：本模板纯粹出于个人爱好进行汉化，并未得到 Wiley 授权，如果需要使用此模板并对版权有顾虑，请联系 Wiley 进行商讨。
+
+Wiley 原始模板地址：https://www.latextemplates.com/template/wiley-book-style
+
+主要修改内容：
+
+1. 章节名称的汉化。
+
+2. 页面大小改为 A4 大小，更加符合中国人习惯；原版为 6x9 或是 7x10 英寸，原版更符合美国人习惯。
+
+3. 对中文字符集进行了设置。
+
+4. 对奇偶页装订线进行了修改，更符合书籍装订习惯。
+
+如果有修改需求，请在站内留言。
+
+\section{待修改内容}
+
+1. 中文奇偶页边距设置，用更好的方式来设置。
+
+2. 中英文混排字体优化。
+
+3. 尽可能使用 CTeX 来进行章节名称汉化，现在是直接在原来的 cls 文件里手工修改，维护十分不方便。
+
+\section{样例一：岳阳楼记}
+
+庆历四年春，滕子京谪守巴陵郡。越明年，政通人和，百废具兴。乃重修岳阳楼，增其旧制，刻唐贤今人诗赋于其上；属予作文以记之。
+
+予观夫巴陵胜状，在洞庭一湖，衔远山，吞长江，浩浩汤汤，横无际涯，朝晖夕阴，气象万千，此则岳阳楼之大观也；前人之述备矣。然则北通巫峡，南极潇湘，迁客骚人，多会于此，览物之情，得无异乎？
+
+若夫霪雨霏霏，连月不开，阴风怒号，浊浪排空，日星隐曜，山岳潜形；商旅不行，樯倾楫摧；薄暮冥冥，虎啸猿啼；登斯楼也，则有去国怀乡，忧谗畏讥，满目萧然，感极而悲者矣！
+
+至若春和景明，波澜不惊，上下天光，一碧万顷，沙鸥翔集，锦鳞游泳，岸芷汀兰，郁郁青青；而或长烟一空，皓月千里，浮光耀金，静影沈璧，渔歌互答，此乐何极！登斯楼也，则有心旷神怡，宠辱皆忘，把酒临风，其喜洋洋者矣！
+
+嗟夫！予尝求古仁人之心，或异二者之为，何哉？不以物喜，不以己悲。居庙堂之高，则忧其民，处江湖之远，则忧其君，是进亦忧，退亦忧。然则何时而乐耶？其必曰「先天下之忧而忧，后天下之乐而乐」欤！噫，微斯人，吾谁与归！
+
+\section{Here is a normal section}
+Here is some text.
+
+\subsection{This is the subsection}
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
+Here is some normal text.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Edited Book: Author and Affiliation
