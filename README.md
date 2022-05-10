@@ -48,6 +48,10 @@ xelatex cover0.tex
 
 根据中文简单调整，可直接编译。
 
+### 其它资源
+
+1. 书籍菲页集合：http://dante.ctan.org/tex-archive/info/latex-samples/TitlePages/titlepages.pdf
+
 # TODO
 
 记录一些待解决的问题：
