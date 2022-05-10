@@ -42,6 +42,12 @@ Wiley 是全球历史最悠久﹑最知名的学术出版商之一，它的英�
 xelatex cover0.tex
 ```
 
+### cover1
+
+来源 URL：https://latexdraw.com/tikz-cover-pages-gallery/
+
+根据中文简单调整，可直接编译。
+
 # TODO
 
 记录一些待解决的问题：
