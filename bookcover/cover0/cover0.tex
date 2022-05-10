@@ -1,0 +1,39 @@
+\documentclass[a4paper]{article}% Jean-C\^ome Charpentier 2005
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    centering,
+    hmargin=0mm,
+    vmargin=0mm,
+    ignoreall
+}
+
+\usepackage{graphicx}
+\usepackage{pstricks}
+\definecolor{pink}{rgb}{1,0.7,0.7}
+
+\begin{document}
+\thispagestyle{empty}
+
+\noindent
+\begin{pspicture}(0,20.5)(\linewidth,0)
+  \psline[linewidth=3mm,linecolor=pink](0,20.5)(\linewidth,20.5)
+  \rput(\linewidth,20.5)
+    {\pspolygon*(-4.13,0)(-1.4,0)(0,-1.4)(0,-4.13)}
+  \rput(\linewidth,20.5)
+    {\rput{-45}(-1,-1){\Large\textbf{\white \'Edition}}}
+  \rput(\linewidth,20.5)
+    {\rput{-45}(-1.5,-1.5){\Large\textbf{\white fran\c caise}}}
+
+  \rput[l](0,3.7){\textsl{\huge Introduction \`a}}
+  \psline[linewidth=3mm,linecolor=pink](0,3)(\linewidth,3)
+  \psline[linewidth=3mm,linecolor=pink](0,0)(\linewidth,0)
+  \rput[b](0.6\linewidth,0)
+    {\includegraphics[height=0.6\textheight]{tiger}}
+  \rput[l](0,1.5){\psscaleboxto(\textwidth,2){fr.comp.text.tex}}
+\end{pspicture}
+
+\vfill\noindent
+{\huge \textbf{CTT}} \hfill
+{\large\textsl{Jean-C\^ome Charpentier}}
+\end{document}

@@ -2,6 +2,8 @@
 
 本仓库存放一些本人修改过的中文 LaTex 模板，主要是对一些英文出版机构的 LaTeX 适合中文环境，以作学习之用。
 
+验证环境：Windows 10，TeX Live 2021
+
 目前有的模板主要有 Wiley。
 
 ## 验证环境
@@ -23,6 +25,22 @@ Wiley 是全球历史最悠久﹑最知名的学术出版商之一，它的英�
 如果需要预览本模板样式，可查看 Wiley_latex_macros_7x10/w-bktmpl.pdf 文件，这是根据 w-bktmpl.tex 生成的中文书籍样例文件。
 
 本模板适合用于科技中文写作，不建议用作文学类题材。
+
+## 书籍封面模板
+
+目录 bookcover 下为书籍封面模板，有一些模板简单修改过才可以编译，现收集在这里。
+
+### cover0
+
+来源 URL ：https://tug.org/PSTricks/main.cgi?file=Examples/Logos/logos
+
+略微根据 A4 尺寸作过调整，使用 "latex -> dvips -> ps2pdf" 的编译方式来获得一页 pdf 输出，并插入书籍的首页作为封面。
+
+替代文件内容及 tiger.eps 文件后，使用 build.cmd 直接编译，也可以用 xelatex 直接编译：
+
+```cmd
+xelatex cover0.tex
+```
 
 # TODO
 
